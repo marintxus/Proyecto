@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personal de diseño y programación">
+    <title>Mi Portafolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menú de navegación (sticky) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#inicio">Mi Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <!-- Buscador -->
+                <form id="buscador" class="d-flex">
+                    <input id="search" class="form-control me-2" type="search" placeholder="Buscar proyectos" aria-label="Buscar">
+                    <button class="btn btn-outline-light" type="button">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Página principal - Introducción -->
+    <section id="inicio" class="container my-5">
+        <div class="text-center">
+            <h1>¡Hola! Soy Iker Marín</h1>
+            <p>Soy un administrador de sistemas apasionado por las redes. Estudié en el CIP Cuatrovientos y me interesa mucho las resoluciones de cubos de Rubik de Tymon Kolasinsky, Max Park, Feliks Zemdegs, Yiheng Wang y Teodor Zadgerg también me gusta Hens, y Brandon y su Sanderslancha.</p>
+        </div>
+
+        <!-- Carousel de imágenes con fade effect -->
+        <div id="carouselExample" class="carousel slide carousel-fade my-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./fotito.webp" class="d-block w-100 hover-shadow" alt="Proyecto 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./sanders.webp" class="d-block w-100 hover-shadow" alt="Proyecto 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./tymon.jpg" class="d-block w-100 hover-shadow" alt="Proyecto 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Página de proyectos -->
+    <section id="proyectos" class="container my-5">
+        <h2 class="text-center">Mis Proyectos</h2>
+        <div class="row">
+            <!-- Proyectos en formato de tarjeta (cards) con hover shadow -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm hover-shadow-lg" data-tags="HTML CSS">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Viaje de Erasmus Oporto</h5>
+                        <p class="card-text">Un viaje junto a unas practicas en un centro de trabajo gracias a Erasmus+</p>
+                        <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalProyecto1">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm hover-shadow-lg" data-tags="JavaScript React">
+                    <img src="https://via.placeholder.com/400x200/ff7f50/ffffff" class="card-img-top" alt="Proyecto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyecto 2</h5>
+                        <p class="card-text">Descripción breve del proyecto 2.</p>
+                        <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalProyecto2">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm hover-shadow-lg" data-tags="HTML CSS JavaScript">ff
+                    <img src="https://via.placeholder.com/400x200/4682b4/ffffff" class="card-img-top" alt="Proyecto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyecto 3</h5>
+                        <p class="card-text">Descripción breve del proyecto 3.</p>
+                        <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalProyecto3">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales para ver detalles de los proyectos -->
+    <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProyecto1Label">Detalles del Proyecto 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Aquí aparecerá la información detallada del proyecto 1.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="modalProyecto2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProyecto2Label">Detalles del Proyecto 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Aquí aparecerá la información detallada del proyecto 2.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProyecto3" tabindex="-1" aria-labelledby="modalProyecto3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProyecto3Label">Detalles del Proyecto 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Aquí aparecerá la información detallada del proyecto 3.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página de contacto -->
+    <section id="contacto" class="container my-5">
+        <h2 class="text-center">Contacto</h2>
+        <form id="contact-form" class="row g-3">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-12">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
